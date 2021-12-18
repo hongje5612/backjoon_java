@@ -2,6 +2,11 @@ package p2156_1;
 
 import java.util.Scanner;
 
+/**
+ * https://www.acmicpc.net/problem/2156
+ *
+ * solution
+ */
 public class Main {
 
     private static short[] amounts;
@@ -25,9 +30,21 @@ public class Main {
 
         return state;
     }
-    
-    private static int[][] dp;
 
+    private static int[][] dp;  // 다이나믹 프로그래밍을 위한 배열
+
+
+    /**
+     *
+     * @param i
+     * i 번째 포도주
+     * @param cnt
+     * 0    : 마시지 않는 경우
+     * 1    : 연속으로 처음을 마시는 경우
+     * 2    : 연속으로 두번째 잔으로 마시는 경우
+     * @return
+     * i 번째 잔까지 왔을 경우 마시는 포도주의 최대 량
+     */
     private static int max(int i, int cnt) {
         if(i < 0) return 0;
         if(dp[i][cnt] != -1) return dp[i][cnt];

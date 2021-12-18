@@ -38,11 +38,11 @@ public class Main {
      *
      * @param cnt
      * 0 마시지 않는 경우
-     * 1 첫 번째 잔으로 마시는 경우
-     * 2 두 번째 잔으로 마시는 경우
+     * 1 연속으로 첫 번째 잔으로 마시는 경우
+     * 2 연속으로 두 번째 잔으로 마시는 경우
      *
      * @return
-     * i 번째 포도주 까지 마실 때 최대 량
+     * i 번째 포도주 왔을 경우  마시는 포도주 최대 량
      */
     private static int max(int i, int cnt) {
         if(i < 0) return 0;
