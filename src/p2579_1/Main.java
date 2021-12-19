@@ -2,6 +2,9 @@ package p2579_1;
 
 import java.util.Scanner;
 
+/**
+ * https://www.acmicpc.net/problem/2579
+ */
 public class Main {
     private static short[] scores; // 계단에 적혀 있는 점수
 
