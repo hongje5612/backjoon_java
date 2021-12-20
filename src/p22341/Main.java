@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * https://www.acmicpc.net/problem/22341
+ * 안녕하세요
  */
 public class Main {
     private static class Point {
