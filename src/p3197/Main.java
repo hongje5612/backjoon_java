@@ -24,6 +24,7 @@ public class Main {
 
         public Lake(char[][] map) {
             this.map = map;
+
             locOfSwans = new Location[NUMBER_OF_SWANS];
         }
 
