@@ -14,7 +14,7 @@ public class Main {
     private static class Combination {
         private static final int SIZE = 30;
 
-        private static long[][] dp;
+        private static final long[][] dp;
 
         static {
             dp = new long[SIZE][SIZE];
