@@ -47,39 +47,39 @@ public class Main {
     }
 
     private static int solve(TestCase t) {
-        /*
-        distance = (x1, y1) 과 (x2, y2) 의 거리
-        distance2 = (int)Math.pow(distance, 2);
-         */
-        int distance2 = (int)Math.pow(t.x1 - t.x2, 2) + (int)Math.pow(t.y1 - t.y2, 2);
-        int sum2 = (int)Math.pow(t.r1 + t.r2, 2);
-
-        if(distance2 > sum2) return 0;
-        else if(distance2 == sum2) return 1;
-        else {
-            int sub2 = (int)Math.pow(t.r1 - t.r2, 2);
-
-            if(sub2 > distance2) return 0;
-            else if(sub2 == distance2) return 1;
-            else return 2;
+        if(t.x1 == t.x2 && t.y1 == t.y2 && t.r1 == t.r2) {
+            return -1;
         }
+        else if(t.x1 == t.x2 && t.y1 == t.y2) {
+            return 0;
+        }
+        else {
+            /*
+                distance = (x1, y1) 과 (x2, y2) 의 거리
+                distance2 = (int)Math.pow(distance, 2);
+             */
+            int distance2 = (int)Math.pow(t.x1 - t.x2, 2) + (int)Math.pow(t.y1 - t.y2, 2);
+            int sum2 = (int)Math.pow(t.r1 + t.r2, 2);
+
+            if(distance2 > sum2) return 0;
+            else if(distance2 == sum2) return 1;
+            else {
+                int sub2 = (int)Math.pow(t.r1 - t.r2, 2);
+
+                if(sub2 > distance2) return 0;
+                else if(sub2 == distance2) return 1;
+                else return 2;
+            }
+        }
+
     }
 
-    private static void printAnswer() {
-        for(TestCase t : testCases) {
-            if(t.x1 == t.x2 && t.y1 == t.y2 && t.r1 == t.r2) {
-                System.out.println(-1);
-            }
-            else if(t.x1 == t.x2 && t.y1 == t.y2) {
-                System.out.println(0);
-            }
-            else {
+
+    public static void main(String[] args) {
+        if(input()) {
+            for(TestCase t : testCases) {
                 System.out.println(solve(t));
             }
         }
-    }
-
-    public static void main(String[] args) {
-        if(input()) printAnswer();
     }
 }
