@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+https://www.acmicpc.net/problem/2042
+ */
 public class Main {
 
     /**
